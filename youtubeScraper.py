@@ -19,7 +19,9 @@ chrome_options = Options()
 driver = webdriver.Chrome(service=s, options=chrome_options)
 driver.implicitly_wait(1)
 
-driver.get("https://www.youtube.com/results?search_query=ukraine")
+# Change to search for something else
+search_query = 'ukraine'
+driver.get(f"https://www.youtube.com/results?search_query={search_query}")
 
 res = {}
 
