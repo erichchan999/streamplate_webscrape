@@ -43,11 +43,14 @@ with open('output.json', 'w') as out:
 
             time.sleep(2)
         
-            comments = WebDriverWait(driver, timeout=10).until(
-                EC.presence_of_element_located((By.ID, 'comments'))
-            )
+            try:
+                comments = WebDriverWait(driver, timeout=10).until(
+                    EC.presence_of_element_located((By.ID, 'comments'))
+                )
 
-            comments_list = comments.find_elements(By.ID, 'content-text')
+                comments_list = comments.find_elements(By.ID, 'content-text')
+            except:
+                comments_list = []
 
             c_list = []
             if comments_list:
