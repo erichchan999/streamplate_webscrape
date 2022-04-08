@@ -68,10 +68,10 @@ with open('output.json', 'w') as out:
 
             driver.back()
 
-        driver.close()
+        driver.quit()
     except:
         print('Something went wrong...')
         print('Closing webdriver')
-        driver.close()
+        driver.quit()
 
     out.write(json.dumps(res))
