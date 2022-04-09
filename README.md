@@ -6,3 +6,5 @@ Uses chrome webdriver
 
 Install chrome webdriver from https://chromedriver.chromium.org/downloads (make sure the version matches your chrome browser).
 
+Go to youtubeScraper.py and change the path to where your chromedriver is located.
+
